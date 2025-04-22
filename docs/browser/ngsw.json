@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1745322834489,
+  "timestamp": 1745327016374,
   "index": "/angular19-anime/index.csr.html",
   "assetGroups": [
     {
@@ -51,7 +51,7 @@
     "/angular19-anime/icons/icon-512x512.png": "1de182f76f7329dfa8f9fcdd1fdcdd695bea6a99",
     "/angular19-anime/icons/icon-72x72.png": "aa88a6096bd973be7f6d7a5489bfa6bc2463f8c4",
     "/angular19-anime/icons/icon-96x96.png": "7fb8f59c30ce2ff12c700321a0b39e14b3dc8f95",
-    "/angular19-anime/index.csr.html": "dde3ad3a00a5f2e67de0e1ccad44247721862012",
+    "/angular19-anime/index.csr.html": "8a7acc9bafefd437197018d24fbd2b52a2b4e227",
     "/angular19-anime/main-U2H7A7VS.js": "e6fb960820d69344b506789045e2191ef5d8b023",
     "/angular19-anime/manifest.webmanifest": "3e2821d0c61421c31678d54fea0a1af956f2cf71",
     "/angular19-anime/polyfills-FFHMD2TL.js": "f49b49a155bc7d192db62a4c15d0a612b460a667",
