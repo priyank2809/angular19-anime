@@ -1,0 +1,21 @@
+<div class="container">
+    <app-card title="Interactive Animated Cards">
+        <div class="controls">
+            <app-button (onClick)="animateCardsIn()">Animate In</app-button>
+            <app-button (onClick)="explodeCards()" variant="secondary">Explode</app-button>
+            <app-button (onClick)="resetCards()" variant="secondary">Reset</app-button>
+        </div>
+
+        <div class="cards-container">
+            <div *ngFor="let card of cards; let i = index" class="animated-card" #cardElement
+                [style.background-color]="card.color" (click)="animateCard(cardElement)">
+                <h3>{{ card.title }}</h3>
+                <p>Click me!</p>
+            </div>
+        </div>
+
+        <div class="instructions">
+            <p>Click on individual cards to see them animate, or use the buttons above to trigger group animations.</p>
+        </div>
+    </app-card>
+</div>

@@ -1,0 +1,46 @@
+.card {
+    background-color: var(--card-bg, white);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+    &.elevated {
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    }
+
+    .card-header {
+        padding: 1rem 1.5rem;
+        border-bottom: 1px solid var(--border-color, #eee);
+
+        h3 {
+            margin: 0;
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: var(--text-color, #333);
+        }
+    }
+
+    .card-content {
+        padding: 1.5rem;
+    }
+}
+
+:host-context(.dark-theme) {
+    .card {
+        background-color: #2a2a2a;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+
+        &.elevated {
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-header {
+            border-bottom-color: #444;
+
+            h3 {
+                color: #e0e0e0;
+            }
+        }
+    }
+}

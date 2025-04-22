@@ -1,0 +1,70 @@
+<div class="timeline-container">
+    <app-card title="Complex Timeline Animation">
+        <div class="scene-container">
+            <div class="scene">
+                <div class="element square" #square></div>
+                <div class="element circle" #circle></div>
+                <div class="element triangle" #triangle></div>
+            </div>
+        </div>
+
+        <div class="timeline">
+            <div class="timeline-track" #timelineTrack>
+                <div class="timeline-indicator" #timelineIndicator></div>
+            </div>
+            <div class="timeline-labels">
+                <span>0s</span>
+                <span>1s</span>
+                <span>2s</span>
+                <span>3s</span>
+                <span>4s</span>
+                <span>5s</span>
+            </div>
+        </div>
+
+        <div class="controls">
+            <app-button (onClick)="playAnimation()">Play</app-button>
+            <app-button (onClick)="pauseAnimation()" variant="secondary">Pause</app-button>
+            <app-button (onClick)="restartAnimation()" variant="secondary">Restart</app-button>
+            <app-button (onClick)="toggleDirection()" variant="secondary">
+                Direction: {{ playDirection() ? 'Reverse ◀' : 'Forward ▶' }}
+            </app-button>
+        </div>
+
+        <div class="animation-details">
+            <h3>Animation Breakdown</h3>
+            <div class="timeline-events">
+                <div class="event">
+                    <div class="event-marker" style="background-color: #FF5722;"></div>
+                    <div class="event-description">
+                        <p><strong>0s:</strong> Square moves right and rotates</p>
+                    </div>
+                </div>
+                <div class="event">
+                    <div class="event-marker" style="background-color: #2196F3;"></div>
+                    <div class="event-description">
+                        <p><strong>1s:</strong> Circle scales up and changes color</p>
+                    </div>
+                </div>
+                <div class="event">
+                    <div class="event-marker" style="background-color: #4CAF50;"></div>
+                    <div class="event-description">
+                        <p><strong>2s:</strong> Triangle appears and moves to center</p>
+                    </div>
+                </div>
+                <div class="event">
+                    <div class="event-marker" style="background-color: #9C27B0;"></div>
+                    <div class="event-description">
+                        <p><strong>3s:</strong> All elements animate together</p>
+                    </div>
+                </div>
+                <div class="event">
+                    <div class="event-marker" style="background-color: #FFC107;"></div>
+                    <div class="event-description">
+                        <p><strong>4s:</strong> Final sequence begins</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </app-card>
+</div>

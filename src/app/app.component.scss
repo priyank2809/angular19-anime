@@ -1,0 +1,168 @@
+:root {
+    --primary-color: #4c5fd5;
+    --primary-color-dark: #3a4bb7;
+    --secondary-color: #e0e0e0;
+    --secondary-color-dark: #c0c0c0;
+    --danger-color: #d54c4c;
+    --danger-color-dark: #b73a3a;
+    --success-color: #4caf50;
+    --success-color-dark: #3d8b40;
+    --text-color: #333;
+    --text-secondary: #666;
+    --background-color: #f8f9fa;
+    --card-bg: white;
+    --border-color: #eee;
+    --header-bg: white;
+    --nav-bg: white;
+    --footer-bg: #f5f5f5;
+}
+
+.dark-theme {
+    --primary-color: #5d6edb;
+    --primary-color-dark: #4c5fd5;
+    --secondary-color: #3a3a3a;
+    --secondary-color-dark: #4a4a4a;
+    --danger-color: #e05d5d;
+    --danger-color-dark: #d54c4c;
+    --success-color: #5cbf60;
+    --success-color-dark: #4caf50;
+    --text-color: #e0e0e0;
+    --text-secondary: #aaa;
+    --background-color: #121212;
+    --card-bg: #2a2a2a;
+    --border-color: #444;
+    --header-bg: #1e1e1e;
+    --nav-bg: #2a2a2a;
+    --footer-bg: #1e1e1e;
+}
+
+.app-container {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header {
+    background-color: var(--header-bg);
+    padding: 1.5rem 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: background-color 0.3s ease;
+
+    .header-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+
+        h1 {
+            margin: 0;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        p {
+            margin: 0.5rem 0 0;
+            color: var(--text-secondary);
+        }
+
+        .theme-toggle {
+            position: absolute;
+            right: 1.5rem;
+            top: 0;
+            background: none;
+            border: none;
+            color: var(--text-color);
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.2s ease;
+
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.05);
+            }
+
+            .dark-theme & {
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.1);
+                }
+            }
+        }
+    }
+}
+
+nav {
+    background-color: var(--nav-bg);
+    padding: 0.5rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease;
+
+    ul {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+
+        li {
+            a {
+                display: block;
+                padding: 0.75rem 1.25rem;
+                text-decoration: none;
+                color: var(--text-color);
+                border-radius: 6px;
+                transition: all 0.2s ease;
+
+                &:hover {
+                    background-color: var(--secondary-color);
+                }
+
+                &.active {
+                    background-color: var(--primary-color);
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+main {
+    flex: 1;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+footer {
+    background-color: var(--footer-bg);
+    padding: 1.5rem;
+    text-align: center;
+    color: var(--text-secondary);
+    transition: background-color 0.3s ease;
+
+    p {
+        margin: 0.5rem 0;
+    }
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation-duration: 0.5s;
+}

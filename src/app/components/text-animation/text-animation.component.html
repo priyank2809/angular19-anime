@@ -1,0 +1,26 @@
+<div class="text-animation-container">
+    <app-card title="Text Animation with anime.js">
+        <div class="text-display">
+            <div class="text-wrapper" #textWrapper>
+                <div class="text-line" *ngFor="let line of textLines(); let i = index" [attr.data-index]="i">
+                    {{ line }}
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <app-button (onClick)="playTextAnimation()">Play Animation</app-button>
+            <app-button (onClick)="showCustomizer()" variant="secondary">Customize Text</app-button>
+        </div>
+
+        <div class="customization-panel" *ngIf="isCustomizing()">
+            <h3>Customize Animation Text</h3>
+            <textarea [ngModel]="customText()" (ngModelChange)="customText.set($event)" rows="5"
+                placeholder="Enter your text (one sentence per line)"></textarea>
+            <div class="button-group">
+                <app-button (onClick)="applyCustomText()">Apply</app-button>
+                <app-button (onClick)="cancelCustomizing()" variant="danger">Cancel</app-button>
+            </div>
+        </div>
+    </app-card>
+</div>

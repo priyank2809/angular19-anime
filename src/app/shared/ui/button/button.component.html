@@ -1,0 +1,4 @@
+<button [class]="'btn ' + (variant || 'primary') + ' ' + (size || 'medium')"
+    [disabled]="disabled" (click)="onClick.emit($event)">
+    <ng-content></ng-content>
+</button>

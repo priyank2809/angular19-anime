@@ -1,0 +1,135 @@
+.timeline-container {
+    width: 100%;
+}
+
+.scene-container {
+    height: 400px;
+    background-color: var(--background-color);
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--border-color);
+}
+
+.scene {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.element {
+    position: absolute;
+    transform-origin: center;
+}
+
+.square {
+    width: 80px;
+    height: 80px;
+    background-color: #FF5722;
+    left: 50px;
+    top: 160px;
+}
+
+.circle {
+    width: 80px;
+    height: 80px;
+    background-color: #2196F3;
+    border-radius: 50%;
+    left: 360px;
+    top: 160px;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 86px solid #4CAF50;
+    top: 160px;
+    left: 580px;
+    opacity: 0;
+}
+
+.timeline {
+    margin-bottom: 2rem;
+}
+
+.timeline-track {
+    height: 10px;
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-indicator {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    top: -5px;
+    left: 0;
+    transform: translateX(-50%);
+    transition: left 0.05s linear, background-color 0.3s ease;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+.timeline-labels {
+    display: flex;
+    justify-content: space-between;
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.animation-details {
+    background-color: var(--background-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    border: 1px solid var(--border-color);
+}
+
+.animation-details h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.timeline-events {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.event {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.event-marker {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.event-description {
+    flex-grow: 1;
+}
+
+.event-description p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
