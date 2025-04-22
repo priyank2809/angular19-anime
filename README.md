@@ -1,3 +1,24 @@
+# Angular 19 Animation Showcase with anime.js
+
+This project demonstrates the integration of anime.js with Angular 19, showcasing the latest features such as Signals, Effects, and View Transitions. It provides multiple interactive animation examples that you can use as starting points for your own projects.
+
+## Features
+
+- **Modern Angular 19 Architecture**: Standalone components, signals for state management
+- **Theme Switching**: Toggle between light and dark modes
+- **Interactive Animations**: Cards, SVG, text, and timeline-based animations
+- **Responsive Design**: Works across different screen sizes
+- **Performance Optimized**: Server-side rendering compatibility
+
+## Angular 19 Features Showcased
+
+- **Signals API**: Reactive state management without RxJS
+- **Effects**: React to state changes with side effects
+- **View Transitions**: Smooth transitions between pages
+- **Standalone Components**: No NgModule needed
+- **Improved DX**: Better type checking, smart defaults
+- **Performance**: Optimized for SSR and hydration
+
 # Angular19Anime
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.8.
