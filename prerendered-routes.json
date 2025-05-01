@@ -1,0 +1,9 @@
+{
+  "routes": {
+    "/angular19-anime": {},
+    "/angular19-anime/cards": {},
+    "/angular19-anime/svg": {},
+    "/angular19-anime/text": {},
+    "/angular19-anime/timeline": {}
+  }
+}
